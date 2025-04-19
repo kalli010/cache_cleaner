@@ -27,7 +27,7 @@ done
 echo
 
 if [[ "$total_savings" -gt 0 ]]; then
-  read -p "Do you want to delete the files in these folders? (yes/no): " fk_left
+  read -p "Do you want to delete $(format $total_savings) of files in these folders? (yes/no): " fk_left
   echo
 else
   fk_left="yes"
