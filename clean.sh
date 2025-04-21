@@ -12,8 +12,10 @@ format() {
     local size=$1
     if [ "$size" -lt 1000 ]; then
         echo -e "\033[32m${size}KB\033[0m"
-    else
+    elif [ "$size" -lt 1000000 ]; then
         echo -e "\033[32m$((size / 1000))MB\033[0m"
+    else
+        echo -e "\033[32m$((size / 1000000))GB\033[0m"
     fi
 }
 
